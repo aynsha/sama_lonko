@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    transition: transform .5s ;
+  }
+header{
+    display: flex;  
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    justify-content: space-around;
+    top: 0%;
+    background-color: #db915f87;
+    height: 25%;
+    margin: 0%;
+}
+.h-menu{
+  display: flex;
+  width: 70%;
+}
+.h-menu img{
+    width: 20%;
+    padding: 3%;
+}
+nav ul{
+    display: flex;
+    margin-right: 4rem;
+    margin-top: 15%;
+}
+nav ul li{
+    list-style: none;
+    margin: 10px;
+}
+nav ul li a{
+   text-decoration: none;
+   font-size: 15px;
+   color: white;
+   font-family: 'Lato', sans-serif;  
+  justify-content: space-around;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+div{
+    display: block;
+}
+.h_panier{
+    display: flex;
+    margin-right: 5%;
+    margin-top: 4rem;
+    color: white;
+    cursor: pointer;
+}
+.h_panier a{
+ text-decoration: none;
+ color: white;
+}
+.h_panier i{
+   color: white; 
+   font-size: 22px;
+   cursor: pointer;
+}
+/* SLIDE BAR */
+.slide-bar{
+    display: flex;
+    background-image: url(img/sac\ seau.jpg);
+    background-color: #db915f4e;
+    background-blend-mode:difference; 
+    background-size: cover; 
+  background-position: center; 
+  width: 100%;
+  height: 130vh;
+  margin: 0%;
+}
+.titles{
+    margin-top: 13%;
+    padding-left: 10%;
+    width: 40%;
+}
+.titles h1{
+    color: white;
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+.titles h3{
+    color: white;
+}
+button{
+    border: none;
+    padding: 15px 30px;
+    margin-right: 10%;
+    cursor: pointer;
+    background-color: white;
+}
+.sp-button{
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+/* SECTION LOGO */
+.logo-container {
+    overflow: hidden;
+    margin-top: 5%;
+    width: 100%;
+    margin-bottom: 7%;
+  }
+  
+  .logo-scroll {
+    justify-content: center;
+    display: flex;
+   
+    width: 100%; /* Ajustez la largeur en fonction du nombre de logos */
+     animation: scroll 10s linear infinite; /*Ajustez la durée de défilement */
+  }
+  .logo-scroll img{
+    width: 7%;
+    margin-left: 2%;
+  }
+   
+  
+  /* END */
+  .section_2{
+    display: flex;
+    justify-content: center;
+  }
+  .femme{
+    padding:1% ;
+    background-image: url(img/pexels-godisable-jacob-1943465.jpg);
+    background-color: #db915f84;
+  background-blend-mode: darken; 
+    display: block;
+    background-size: cover; 
+  background-position: center; 
+  width: 20%;
+  height: 60vh;
+  margin: 2%;
+  color: white;
+  }
+  /* SECTION GENRE ARTICLE */
+  .femme h3{
+    padding-top: 75%;
+  }
+  .lagirl{
+    padding:2% ;
+    background-image: url(img/pexels-godisable-jacob-3689163.jpg);
+    background-color: #db915f79;
+  background-blend-mode: darken; 
+    display: block;
+    background-size: cover; 
+  background-position: center; 
+  width: 20%;
+  height: 55vh;
+  margin: 2%;
+  color: white;
+  }
+  .lagirl h3{
+    padding-top: 70%;
+  }
+  .homme{
+    padding:2% ;
+    background-image: url(img/homme-sac-messager-cuir-marron-fond-gris_761065-1794.jpg);
+    background-color: #db915f6c;
+  background-blend-mode: darken; 
+    display: block;
+    background-size: cover; 
+  background-position: center; 
+  width: 20%;
+  height: 55vh;
+  margin: 2%;
+  color: white;
+  }
+  .homme h3{
+    padding-top: 70%;
+  }
+  /* END */
+  /* SECTION les produits */
+  .section_3{
+    display: block;
+  }
+  .section_3 h1{
+  text-align: center;
+    font-size: 35px;
+  }
+  .section_3 hr{
+    border:1.5px solid #db915f;
+    width: 15%;
+  }
+  
+  .listProduct .product img{
+    width: 100%;
+}
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: 5%;
+}
+.listProduct .product{
+    padding: 20px;
+    border-radius: 20px;
+}
+.listProduct .product h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .product .price{
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+.listProduct .product button{
+  padding-top: 15px 30px ;
+  background-color: black;
+  margin-left: 15%;
+ margin-right: 0%;
+ color: white;
+ font-size: 13px;
+}
+.cartTab{
+  width: 400px;
+  background-color:#db915f;
+  color: #eee;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: .5s;
+  padding: 1%;
+}
+body.showCart .cartTab{
+  right: 0;
+}
+body.showCart .container{
+  transform: translateX(0px);
+  height: 100%;
+  position: fixed;
+}
+ .cartTab h1{
+  padding: 20px;
+  margin: 0;
+font-weight: 100;
+font-size: 30px;
+ }
+ .cartTab .btn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ }
+ .cartTab .btn button{
+  background-color: #553734;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+ }
+ .cartTab .btn .close{
+  background-color: black;
+ }
+ .cartTab .listCart .product img{
+  width: 100%;
+ }
+ .cartTab .listCart .product{
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr ;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+ }
+ .listCart .quantity{
+  display: flex;
+ }
+ .listCart .quantity span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  color: #555;
+  cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color: #eee;
+  cursor: auto;
+}
+.listCart .product:nth-child(even){
+  background-color:#db915f;
+}
+.listCart{
+  overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+  width: 0;
+}
+
+ /* END */
+ /* SECTION PROMO */
+ .section_4{
+    justify-content: center;
+    background-image: url(img/portrait-mode-femme-elegante.jpg);
+    background-color: #db915f4e;
+    background-blend-mode:difference; 
+    background-size: cover; 
+  background-position: center; 
+  width: 70%;
+  height: 30vh;
+  margin:7% ;
+  padding: 8%;
+  color: white;
+ }
+ /* END */
+ .section_5{
+  width: 100%;
+ bottom: 0;
+ }
+ .les-links{
+    display: flex;
+    background-color: #db915f;
+    padding-top: 6%;
+    padding-left: 10%;
+   margin: 0%;
+ }
+ .les-links ul li {
+    list-style: none;
+ }
+ .les-links ul li a{
+    text-decoration: none;
+    color: #553734;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+ }
+ .les-links h3{
+    font-size: 19px;
+    color: #231817;
+    line-height: 33px;
+    text-align: center;
+ }
+ .lien-rapides, .pour_elle, .pour_lui{
+    margin-left: 2%;
+ }
+ .logo-footer{
+    display: block;
+    width: 40%;
+    margin-left: 10%;
+ }
+ .logo-footer img{
+    width: 55%;
+    float: right;
+    
+ }
+ .logo-footer h3{
+    float: right;
+    margin-top: 5%;
+ }

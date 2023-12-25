@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Versaille",
+        "price": 55,
+        "image": "img/Coach x Billy Reid.jpg"
+    },
+    {
+        "id": 2,
+        "name":" Correa",
+        "price": 250,
+        "image": "img/Sale _ Womenswear & Menswear - COS.jpg"
+    },
+    {
+        "id": 3,
+        "name":" Louse",
+        "price": 290,
+        "image": "img/完成 _ Designer Leathers GO.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Bangcard",
+        "price": 200,
+        "image": "img/diana-light-nvQemFKRBUo-unsplash.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Versaille",
+        "price": 300,
+        "image": "img/arno-senoner-ooj5VfXq5o8-unsplash.jpg"
+    },
+    {
+        "id": 6,
+        "name":" Correa",
+        "price": 200,
+        "image": "img/irene-kredenets-tcVH_BwHtrc-unsplash.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Louse",
+        "price": 200,
+        "image": "img/Le nuove tracolle di Prada - Grazia.jpg"
+    },
+    {
+        "id": 8,
+        "name":" Bangcard",
+        "price": 200,
+        "image": "img/Camera Straps MadeWithLove.jpg"
+    }
+
+]
