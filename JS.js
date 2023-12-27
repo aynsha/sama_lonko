@@ -4,10 +4,12 @@ let iconCart = document.querySelector('.icon-cart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
+
+//2 Tableaux pour stocker les données des produits et les éléments du panier.
 let products = [];
 let cart = [];
 
-
+//Deux Evénements pour l'icône du panier et au bouton de fermeture pour basculer l'affichage de la modale du panier.
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 })
@@ -15,7 +17,7 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 })
 
-    const addDataToHTML = () => {
+    function addDataToHTML (){
     // remove datas default from HTML
 
         // add new datas
@@ -34,6 +36,7 @@ closeCart.addEventListener('click', () => {
             });
         }
     }
+    // 2éme Evénements pour la liste de produits pour gérer les clics sur le bouton "Ajouter au panier"
     listProductHTML.addEventListener('click', (event) => {
         let positionClick = event.target;
         if(positionClick.classList.contains('addCart')){
@@ -41,7 +44,7 @@ closeCart.addEventListener('click', () => {
             addToCart(id_product);
         }
     })
-const addToCart = (product_id) => {
+function addToCart (product_id){
     let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
     if(cart.length <= 0){
         cart = [{
@@ -59,10 +62,10 @@ const addToCart = (product_id) => {
     addCartToHTML();
     addCartToMemory();
 }
-const addCartToMemory = () => {
+function addCartToMemory (){
     localStorage.setItem('cart', JSON.stringify(cart));
 }
-const addCartToHTML = () => {
+function addCartToHTML (){
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
     if(cart.length > 0){
@@ -94,7 +97,7 @@ const addCartToHTML = () => {
     }
     iconCartSpan.innerText = totalQuantity;
 }
-
+//3éme Evénements pour les éléments du panier pour gérer les changements de quantité et les actions de suppression d'éléments
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
@@ -106,7 +109,7 @@ listCartHTML.addEventListener('click', (event) => {
         changeQuantityCart(product_id, type);
     }
 })
-const changeQuantityCart = (product_id, type) => {
+function changeQuantityCart (product_id, type){
     let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
     if(positionItemInCart >= 0){
         let info = cart[positionItemInCart];
@@ -129,7 +132,7 @@ const changeQuantityCart = (product_id, type) => {
     addCartToMemory();
 }
 
-const initApp = () => {
+function initApp (){
     // get data product
     fetch('products.json')
     .then(response => response.json())
